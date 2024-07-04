@@ -3,7 +3,7 @@ import React from 'react'
 import styles from './postUser.module.css'
 
 const getData = async (userId) => {
-    const res = await fetch(`https://jsonplaceholder.typicode.com/users/${userId}`);
+    const res = await fetch(`https://jsonplaceholder.typicode.com/users/${userId}`, {cache:"no-store"});
     const data = await res.json()
     return data
   }
