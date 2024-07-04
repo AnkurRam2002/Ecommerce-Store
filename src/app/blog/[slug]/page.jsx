@@ -23,9 +23,6 @@ const SinglePostPage = async ({params}) => {
       <h1 className={styles.title}>{posts.title}</h1>
       <div className={styles.detail}>
        <Image src='/user.png' alt="" className={styles.avatar} width={50} height={50}/>
-       <div className={styles.detailText}>
-            <span className={styles.detailTitle}>Author</span>
-            <span className={styles.detailValue}>Name</span></div>
         <div className={styles.detailText}>
             <span className={styles.detailTitle}>Published</span>
             <span className={styles.detailValue}>Date</span>
