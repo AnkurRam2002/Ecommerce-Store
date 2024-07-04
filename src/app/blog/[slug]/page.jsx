@@ -2,23 +2,18 @@ import React, { Suspense } from 'react'
 import styles from './singlePost.module.css'
 import Image from 'next/image'
 import PostUser from '@/components/postUser/postUser';
-
-const getData = async (slug) => {
-  const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${slug}`);
-  const data = await res.json()
-  return data
-}
+import { getPost } from '@/lib/data';
 
 const SinglePostPage = async ({params}) => {
 
   const {slug} = params;
 
-  const posts = await getData(slug);
+  const posts = await getPost(slug);
 
   return (
     <div className={styles.container}>
       <div className={styles.imgContainer}>
-          <Image src='/post.png' alt="" fill className={styles.img} />
+          <Image src={posts.img} alt="" fill className={styles.img} />
         </div>
       <div className={styles.textContainer}>
       <h1 className={styles.title}>{posts.title}</h1>
@@ -31,7 +26,7 @@ const SinglePostPage = async ({params}) => {
             <span className={styles.detailValue}>Date</span>
        </div>
       </div>
-      <div className={styles.content}>{posts.body}</div>
+      <div className={styles.content}>{posts.desc}</div>
       </div>
     </div>
   )
