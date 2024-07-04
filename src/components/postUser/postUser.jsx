@@ -1,6 +1,16 @@
+import Image from 'next/image';
 import React from 'react'
+import styles from './postUser.module.css'
 
-const postUser = () => {
+const getData = async (userId) => {
+    const res = await fetch(`https://jsonplaceholder.typicode.com/users/${userId}`);
+    const data = await res.json()
+    return data
+  }
+
+const PostUser = async ({userId}) => {
+
+    const user = await getData(userId);
   return (
     <div className={styles.container}>
       <Image
@@ -18,4 +28,4 @@ const postUser = () => {
   );
 };
 
-export default postUser
+export default PostUser;
