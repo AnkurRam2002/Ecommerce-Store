@@ -4,6 +4,16 @@ import Image from 'next/image'
 import PostUser from '@/components/postUser/postUser';
 import { getPost } from '@/lib/data';
 
+const getData = async (slug) => {
+  const res = await fetch(`http://localhost:3000/api/blog/${slug}`);
+
+  if (!res.ok) {
+    throw new Error("Something went wrong");
+  }
+
+  return res.json();
+};
+
 export const generateMetadata = async ({ params }) => {
   const { slug } = params;
 
@@ -19,7 +29,7 @@ const SinglePostPage = async ({params}) => {
 
   const {slug} = params;
 
-  const posts = await getPost(slug);
+  const posts = await getData(slug);
 
   return (
     <div className={styles.container}>
