@@ -3,7 +3,10 @@ import styles from './blog.module.css'
 import React from 'react'
 import { getPosts } from '@/lib/data';
 
-
+export const metadata = {
+  title: "Blog Page",
+  description: "Blog description",
+};
 
 const BlogPage = async () => {
 
