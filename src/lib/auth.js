@@ -3,6 +3,7 @@ import GitHub from "next-auth/providers/github"
 import CredentialsProvider from "next-auth/providers/credentials"
 import { User } from "./models";
 import { connectToDb } from "./utils";
+import bcrypt from "bcryptjs";
 
 const login = async (credentials) => {
   try {

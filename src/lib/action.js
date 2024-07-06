@@ -3,6 +3,7 @@
 import { signIn, signOut } from "./auth";
 import { User } from "./models";
 import bcrypt from "bcryptjs";
+import { connectToDb } from "./utils";
 
 
 export const handleGithubLogin = async() => {
