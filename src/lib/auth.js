@@ -1,6 +1,7 @@
 import NextAuth from "next-auth"
 import GitHub from "next-auth/providers/github"
 import { User } from "./models";
+import { connectToDb } from "./utils";
  
 export const { handlers:{
     GET,
@@ -30,6 +31,5 @@ export const { handlers:{
       }
       return true;
     },
-    ...authConfig.callbacks,
   },
 });
