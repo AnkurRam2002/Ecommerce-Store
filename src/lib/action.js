@@ -51,3 +51,18 @@ export const handleLogout = async() => {
       return { error: "Something went wrong!" };
     }
   };
+
+  export const login = async (prevState, formData) => {
+    const { username, password } = Object.fromEntries(formData);
+  
+    try {
+      await signIn("credentials", { username, password });
+    } catch (err) {
+      console.log(err);
+  
+      if (err.message.includes("CredentialsSignin")) {
+        return { error: "Invalid username or password" };
+      }
+      throw err;
+    }
+  };
