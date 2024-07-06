@@ -44,7 +44,7 @@ const SinglePostPage = async ({params}) => {
        </Suspense>
         <div className={styles.detailText}>
             <span className={styles.detailTitle}>Published</span>
-            <span className={styles.detailValue}>Date</span>
+            <span className={styles.detailValue}>{posts.createdAt?.toString().slice(0, 10)}</span>
        </div>
       </div>
       <div className={styles.content}>{posts.desc}</div>

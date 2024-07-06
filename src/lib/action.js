@@ -1,9 +1,10 @@
 "use server";
 
-import { signIn, signOut } from "./auth";
-import { User } from "./models";
-import bcrypt from "bcryptjs";
+import { revalidatePath } from "next/cache";
+import { Post, User } from "./models";
 import { connectToDb } from "./utils";
+import { signIn, signOut } from "./auth";
+import bcrypt from "bcryptjs";
 
 
 export const handleGithubLogin = async() => {
