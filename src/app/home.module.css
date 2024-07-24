@@ -28,24 +28,13 @@
     min-width: 120px;
     cursor: pointer;
     border: none;
-    border-radius: 5px;
+    border-radius: 50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
   
   .button:first-child{
     background-color: var(--btn);
     color: var(--text);
-  }
-  
-  .brands{
-    width: 500px;
-    height: 50px;
-    position: relative;
-    filter: grayscale(1);
-  }
-  
-  .imgContainer {
-    flex: 1;
-    position: relative;
   }
   
   @media (max-width: 1024px) {
