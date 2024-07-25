@@ -11,34 +11,22 @@ const AboutPage = () => {
   return (
     <div className={styles.container}>
       <div className={styles.textContainer}>
-        <h2 className={styles.subtitle}>About Agency</h2>
         <h1 className={styles.title}>
-          We create digital ideas that are bigger, bolder, braver and better.
+          About Us
         </h1>
         <p className={styles.desc}>
-          We create digital ideas that are bigger, bolder, braver and better. We
-          believe in good ideas flexibility and precission We’re world’s Our
-          Special Team best consulting & finance solution provider. Wide range
-          of web and software development services.
+        Welcome to VoyageVerse, your ultimate destination for exploring the world through the eyes of passionate travelers. Founded by a group of wanderlust enthusiasts, Travel Stories aims to bring the beauty and excitement of global adventures right to your screen. Our mission is to inspire, inform, and connect a community of travelers who share a love for discovering new places and cultures.
         </p>
         <div className={styles.boxes}>
           <div className={styles.box}>
-            <h1>10 K+</h1>
-            <p>Year of experience</p>
-          </div>
-          <div className={styles.box}>
-            <h1>10 K+</h1>
-            <p>Year of experience</p>
-          </div>
-          <div className={styles.box}>
-            <h1>10 K+</h1>
-            <p>Year of experience</p>
-          </div>
+            <h1>10+</h1>
+            <p>Exciting Stories</p>
+          </div>  
         </div>
       </div>
       <div className={styles.imgContainer}>
         <Image
-          src="/about.png"
+          src="/about2.png"
           alt="About Image"
           fill
           className={styles.img}

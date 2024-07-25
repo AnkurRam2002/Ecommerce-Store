@@ -5,7 +5,7 @@ import PostUser from '@/components/postUser/postUser';
 import { getPost } from '@/lib/data';
 
 const getData = async (slug) => {
-  const res = await fetch(`http://localhost:3000/api/blog/${slug}`);
+  const res = await fetch(`http://localhost:3000/api/blog/${slug}`,{next:{revalidate:3600}});
 
   if (!res.ok) {
     throw new Error("Something went wrong");
@@ -34,7 +34,8 @@ const SinglePostPage = async ({params}) => {
   return (
     <div className={styles.container}>
       <div className={styles.imgContainer}>
-          <Image src={posts.img} alt="" fill className={styles.img} />
+          <Image src={posts.img} alt="image" 
+          fill className={styles.img} />
         </div>
       <div className={styles.textContainer}>
       <h1 className={styles.title}>{posts.title}</h1>

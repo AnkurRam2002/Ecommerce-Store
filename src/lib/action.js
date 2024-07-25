@@ -74,7 +74,7 @@ export const handleLogout = async() => {
     // const desc = formData.get("desc");
     // const slug = formData.get("slug");
   
-    const { title, desc, slug, userId } = Object.fromEntries(formData);
+    const { title, desc, slug, img, userId } = Object.fromEntries(formData);
   
     try {
       connectToDb();
@@ -82,6 +82,7 @@ export const handleLogout = async() => {
         title,
         desc,
         slug,
+        img,
         userId,
       });
   
