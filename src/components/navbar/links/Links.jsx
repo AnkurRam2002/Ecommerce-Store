@@ -14,7 +14,7 @@ const Links = ({session}) => {
 
     const links = [
         {
-          title: "Homepage",
+          title: "Home",
           path: "/",
         },
         {
@@ -26,7 +26,7 @@ const Links = ({session}) => {
           path: "/contact",
         },
         {
-          title: "Blog",
+          title: "Stories",
           path: "/blog",
         },
       ];
