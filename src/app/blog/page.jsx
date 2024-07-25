@@ -8,7 +8,7 @@ export const metadata = {
 };
 
 const getData = async () => {
-  const res = await fetch("https://voyage-verse-iuj3owtva-ankurram2002s-projects.vercel.app/api/blog", {next:{revalidate:3600}});
+  const res = await fetch("https://voyage-verse.vercel.app/api/blog", {next:{revalidate:1800}});
 
   if (!res.ok) {
     throw new Error("Something went wrong");
