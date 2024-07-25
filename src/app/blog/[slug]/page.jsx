@@ -5,7 +5,7 @@ import PostUser from '@/components/postUser/postUser';
 import { getPost } from '@/lib/data';
 
 const getData = async (slug) => {
-  const res = await fetch(`http://localhost:3000/api/blog/${slug}`,{next:{revalidate:3600}});
+  const res = await fetch(`https://voyage-verse-iuj3owtva-ankurram2002s-projects.vercel.app/api/blog/${slug}`,{next:{revalidate:3600}});
 
   if (!res.ok) {
     throw new Error("Something went wrong");
